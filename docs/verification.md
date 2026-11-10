@@ -47,6 +47,12 @@ PASEO_CLI=/absolute/path/to/paseo-0.15.4 node scripts/verify-paseo.mjs
 
 独立规格与 TypeScript 代码质量审查完成，发现的问题均按失败测试 → 修复 → 通过测试处理，复审通过。详细记录见 [review-01.md](review-01.md)。降低 manifest 最低版本前，先在无 node_modules 的源码副本和实际 0.14.0 宿主完成隔离验证，生产逻辑未更改。
 
+## 仓库交付与云端 CI
+
+实现提交 `d1d1ad7a4d542a7265d5d6f53f654208044c944c` 已推送到目标仓库 `main`，通过远端 ref 回读确认与本地一致。
+
+[GitHub Actions 运行记录](https://github.com/whiteCcinn/paseo-claude-interaction-translator/actions/runs/42809936320) 显示账号因 billing issue 被锁定，任务未启动。两个 Node 矩阵任务的 steps 均为空；没有运行安装、类型检查或测试。云端验证因此受外部条件阻断，不能视为云端通过，也没有代码测试失败的证据。工作流已保留，账号恢复后可重新运行。
+
 ## 验证边界
 
 - 未在用户真实 Paseo 会话中执行安装、发送消息或更换配置。

@@ -11,4 +11,4 @@
 - [x] 3.1 Run unit/integration tests, typecheck and strict OpenSpec validation.
 - [x] 3.2 Load the plugin in an isolated Paseo 0.15.4 daemon and verify both bundles.
 - [x] 3.3 Complete adversarial spec and TypeScript reviews; fix findings.
-- [ ] 3.4 Document installation and limitations, commit and push; verify remote SHA.
+- [x] 3.4 Document installation and limitations, commit and push; verify remote SHA.

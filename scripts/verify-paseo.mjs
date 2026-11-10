@@ -8,7 +8,7 @@ import { once } from "node:events";
 
 // Uses an explicitly selected CLI and a disposable daemon; never loads ~/.paseo.
 const cli = process.env.PASEO_CLI;
-if (!cli) throw new Error("请设置 PASEO_CLI 为 Paseo 0.15.4 CLI 的绝对路径。");
+if (!cli) throw new Error("请设置 PASEO_CLI 为 Paseo 0.14.0 或兼容版本 CLI 的绝对路径。");
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const home = await mkdtemp(join(tmpdir(), "paseo-translator-smoke-"));
 // Each management command also owns a process group: even a stuck `stop`
