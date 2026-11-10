@@ -1,7 +1,7 @@
 ## ADDED Requirements
 
 ### Requirement: Translate a draft explicitly
-The plugin SHALL translate input only on an explicit composer action, preserve code/paths/URLs, and SHALL NOT send a prompt. It SHALL replace only the unchanged draft captured before the request, and SHALL retain the source draft on failure.
+The plugin SHALL translate input only on an explicit translation-screen action, preserve code/paths/URLs, and SHALL NOT send a prompt during translation. A separate explicit confirmation MAY send the prepared translation through the public SDK. It SHALL adopt only the unchanged draft captured before the request, and SHALL retain the source draft on failure. The screen SHALL be reachable through `/translate [text]` and the agent Command Center. Native composer drafts and attachments SHALL remain untouched.
 
 #### Scenario: User edits while translating
 - **WHEN** the current draft differs from the captured draft when translation finishes
@@ -20,6 +20,8 @@ The plugin SHALL use live turn lifecycle and exact message identity to select on
 
 ### Requirement: Preserve model history
 The plugin SHALL display translations through client renderers and SHALL NOT edit canonical assistant messages or send translated responses back to the agent. Source text SHALL remain available. Failed output translation SHALL preserve source text and allow retry.
+
+Settings revisions SHALL invalidate prepared input translations and cached display translations. Concurrent settings changes SHALL NOT leave a send operation permanently locked or admit a stale request after disable. Closing an agent SHALL invalidate pending retry admission across settings reads.
 
 #### Scenario: Display translation
 - **WHEN** a final response translation is ready
