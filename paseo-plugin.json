@@ -1,0 +1,6 @@
+{
+  "id": "paseo-claude-interaction-translator",
+  "name": "Claude 交互翻译",
+  "description": "点击翻译输入，本轮结束后自动翻译最终答复；模型历史保持原文。",
+  "requirements": { "paseo": ">=0.15.4 <0.16.0" }
+}

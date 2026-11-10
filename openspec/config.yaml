@@ -1,0 +1,7 @@
+schema: spec-driven
+context: |
+  TypeScript Paseo plugin, compatible with Paseo 0.15.4.
+  Client uses React Native; Node operations remain under server/.
+  Follow TDD. Input translation requires a user action and never sends prompts.
+  Translate only successful live main-turn final assistant messages.
+  Preserve canonical/provider history; no translation of restored history.
