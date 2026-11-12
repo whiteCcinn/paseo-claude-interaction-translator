@@ -11,4 +11,6 @@
 - `npm run check` 的两份 TypeScript 检查及 53 项单元测试全部通过；`openspec validate --all --strict` 的两项变更验证通过；`git diff --check` 通过。
 - 截图结束后，专用演示窗口和 daemon 已关闭，临时 home 已清理。
 
-推送后仍需验证公开图片 URL 的 HTTP 状态和内容类型，再向目录维护者提供新提交与图片链接；上述本地检查不代表 PR 已合并。
+交付验证：资料提交 `2b545ce5f707e82fdb5021e87b009f32437c95a8` 已推送到 `main`。[固定提交的公开图片](https://raw.githubusercontent.com/whiteCcinn/paseo-claude-interaction-translator/2b545ce5f707e82fdb5021e87b009f32437c95a8/assets/translation-panel.jpg)实际 GET 返回 HTTP 200、`image/jpeg`，下载字节与本地完全一致。SHA-256 为 `5135bbd3b1192817d8c364a0fc1bc5d4d4358180a98ddd2bd86d03b2f582b427`。
+
+英文跟进回复已备好，等待授权后发送；目录维护者仍需更新固定提交并发布，上述检查不代表 PR 已合并。

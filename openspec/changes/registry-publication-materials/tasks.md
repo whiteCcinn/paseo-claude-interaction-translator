@@ -6,5 +6,5 @@
 
 ## 2. Verification and delivery
 - [x] 2.1 Validate package contents, image format and OpenSpec; review the changes adversarially.
-- [ ] 2.2 Commit and push to main, verify the remote SHA and public image content type.
-- [ ] 2.3 Prepare the English PR follow-up with commit and image links; post only when explicitly authorized.
+- [x] 2.2 Commit and push to main, verify the remote SHA and public image content type.
+- [x] 2.3 Prepare the English PR follow-up with commit and image links; post only when explicitly authorized.
